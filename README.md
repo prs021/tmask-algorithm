@@ -29,6 +29,11 @@ Before using this Tmask algorithm, there are many works need to be done. First, 
 
 There are some sample stacked data prepared for Tmask algorithm located at: http://ftp-earth.bu.edu/public/zhuzhe/Tmask/data/
 
+Matlab code
+Need Matlab environment and toolboxes and can be run on any 64bits machine (PC, Mac, Linux) with 4G+ memory. 
+
+You can download the Matlab code here: https://www.dropbox.com/sh/4qjcihruku5bou6/AAAEdsQUdzirVFmyEqpkZLRsa?dl=0
+
 Linux Executable
 Stand alone Linux executable Fmask software which do not need to install Matlab or R and runs on Linux 64 bits machine with 4G+ memory. Please use the following steps:
 
