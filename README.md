@@ -1,12 +1,11 @@
 tmask-algorithm
 Tmask software
-The 1.0 version of Tmask will be ready to use soon! Able to process Landsat 4, 5, 7, and 8 images on Windows and Linux server.
+
+This software called Tmask (multiTemporal mask) is used for automated clouds, cloud shadows, and snow masking for Landsat 4-8 images based on time series analysis. Please contact Zhe Zhu (zhe.zhu@ttu.edu) at Department of Geosciences, Texas Tech University if you have any questions. 
 
 Please cite the following paper: Zhu, Z. and Woodcock, C. E., Automated cloud, cloud shadow, and snow detection based on multitemporal Landsat data: an algorithm designed specifically for monitoring land cover change, Remote Sensing of Environment (accepted), doi:10.1016/j.rse.2014.06.012 (This paper explains the 1.0 version of Tmask in great details).
 
 Please note that this algorithm is very time consuming. For example, to provide cloud, cloud shadow, and snow masks for all sample images (33 Landsat images), it may take approximately 20 CPU hours! Running on the high performance computing server is suggested.
-
-This Matlab code called Tmask (multiTemporal mask) is used for automated clouds, cloud shadows, and snow masking for Landsat images based on time series analysis developed by Zhe Zhu (zhuzhe@bu.edu) and Curtis E. Woodcock (curtis@bu.edu) at Center for Remote Sensing, Department of Earth and Environment, Boston University.
 
 After running Fmask, there will be an image called XXXTmask that can be opened by ENVI. The image values are presenting the following classes:
 
@@ -22,7 +21,7 @@ After running Fmask, there will be an image called XXXTmask that can be opened b
 
 255 => no observation
 
-1.0 Stand Alone Version
+# 1.0 Version
 This algorithm provide better results than Fmask and is based on the Fmask results and time series analysis.
 
 Before using this Tmask algorithm, there are many works need to be done. First, you need to convert the three Landsat bands (Band 2, 4, and 5 - Landsat 7 numbering) into TOA reflectance. Second, you need to run Fmask algorithm for each Landsat images. Third, you need to stack the three TOA bands and Fmask band together into the same biq image file (ENVI format) in the ordering of TOA Band 2, 4, 5, and Fmask result. Fourth, put each stack file and original metadata into the same folder (each folder contain one Landsat images). Finally, resample all the stacked images into the same dimension and same upper-left corner (make images comparable) as the first image. Then you are able to run Tmask for as many images as you want.
@@ -32,12 +31,12 @@ There are some sample stacked data prepared for Tmask algorithm located at: http
 Matlab code
 Need Matlab environment and toolboxes and can be run on any 64bits machine (PC, Mac, Linux) with 4G+ memory. 
 
-You can download the Matlab code here: https://www.dropbox.com/sh/4qjcihruku5bou6/AAAEdsQUdzirVFmyEqpkZLRsa?dl=0
+You can download the Matlab code [here]: (https://www.dropbox.com/sh/4qjcihruku5bou6/AAAEdsQUdzirVFmyEqpkZLRsa?dl=0)
 
 Linux Executable
 Stand alone Linux executable Fmask software which do not need to install Matlab or R and runs on Linux 64 bits machine with 4G+ memory. Please use the following steps:
 
-1. Download Tmask 1.0 version Linux package "Tmask_pkg.zip" Use any Brosweer and go to the following ftp sites: http://ftp-earth.bu.edu/public/zhuzhe/Tmask/Tmask_Linux_1.0v/
+1. Download Tmask 1.0 version Linux package "Tmask_pkg.zip" Use any Brosweer and go to the following [ftp sites]: (http://ftp-earth.bu.edu/public/zhuzhe/Tmask/Tmask_Linux_1.0v/)
 
 2. Unzip the software using "unzip Tmask_pkg.zip"
 
@@ -90,7 +89,7 @@ You can use "/Tools/Tmask stk_n n_start n_end T_times bufcd bufsd bufsn", for ex
 Windows Executable
 Stand alone Linux executable Tmask software which do not need to install Matlab or R and runs on Linux 64 bits machine with 4G+ memory. Please use the following steps:
 
-1. Download Tmask 1.0 version Windows package "Tmask_pkg.exe" Use any Brosweer and go to the following ftp sites: http://ftp-earth.bu.edu/public/zhuzhe/Tmask/Tmask_Windows_1.0v/
+1. Download Tmask 1.0 version Windows package "Tmask_pkg.exe" Use any Brosweer and go to the following [ftp sites]: (http://ftp-earth.bu.edu/public/zhuzhe/Tmask/Tmask_Windows_1.0v/)
 
 2. Double click "Tmask_pkg.exe" and install it with wizard.
 
