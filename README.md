@@ -6,8 +6,6 @@ This software called Tmask (multiTemporal mask) is used for automated clouds, cl
 
 **IMPORTANT:**
 
-**We have moved!**
-
-**The new URL for this page is https://github.com/gersl/tmask/.**
+**We have moved! The new URL for this page is https://github.com/gersl/tmask/.**
 
 **Sorry for any inconvenience.**
